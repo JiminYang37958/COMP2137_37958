@@ -50,7 +50,7 @@ echo "[INFO] Updating /etc/hosts for server1..."
 
 # remove old server1 lines
 if grep -q "server1" /etc/hosts; then
-    sed -i '/server1/d' /etc/hosts
+    sed -i '/[[:space:]]server1$/d' /etc/hosts
 fi
 
 # add correct entry
